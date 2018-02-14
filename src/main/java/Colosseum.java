@@ -34,8 +34,10 @@ public class Colosseum {
      * Input scanner. Use this to take in user's input for buildPokemon(). <br>
      * Useful functions: next(), nextInt() .
      */
-    static Scanner myScan;
-
+    static Scanner myScan = new Scanner(System.in);
+    Pokemon tempPokemon = new Pokemon();
+    System.out.print("Please enter the name of your Pokemon");
+    //tempPokemon =
     /**
      * How we will build our Pokemon to battle.
      * <p>
@@ -101,7 +103,11 @@ public class Colosseum {
      * Write this function.
      */
     public static void determineWinner() {
-        System.out.println("Implement me!");
+        if (firstPokemon.hitPoints == 0) {
+            System.out.println("secondPokemon wins!");
+        } else {
+            System.out.println("firstPokemon wins!");
+        }
     }
 
     /**
